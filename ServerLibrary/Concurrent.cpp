@@ -1,11 +1,10 @@
-#include "pch.h"
+#include "Concurrent.h"
 #include <cstddef>
-
 
 namespace FLORENCE
 {
-    Control_Of_Concurrent* ptr_Control_Of_Concurrent = NULL;
-    Praise0_Algorithm* ptr_Algorithms_Subset = NULL;//TODO CLASS T
+    Control_Of_Concurrent* Concurrent::ptr_Control_Of_Concurrent = NULL;
+    Praise0_Algorithm* Concurrent::ptr_Algorithms_Subset = NULL;//TODO CLASS T
 
     Concurrent::Concurrent()
     {
@@ -27,12 +26,8 @@ namespace FLORENCE
         while (this->ptr_Control_Of_Concurrent == NULL) { /* wait untill class constructed */ }
     }
 
-    void Concurrent::Thread_Concurrency(
-        unsigned char concurrent_coreId,
-        unsigned char* ptr_MyNumImplementedCores
-    )
+    void Concurrent::Thread_Concurrency(unsigned char concurrent_coreId, unsigned char* ptr_MyNumImplementedCores)
     {
-        //FLORENCE::Server* FLORENCE::framework::Get_Server() = FLORENCE::framework::Get_Server();
         FLORENCE::framework::Get_Server()->Get_Execute()->Get_Control_Of_Execute()->SetConditionCodeOfThisThreadedCore(concurrent_coreId);
         while (FLORENCE::framework::Get_Server()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(ptr_MyNumImplementedCores) != false)
         {

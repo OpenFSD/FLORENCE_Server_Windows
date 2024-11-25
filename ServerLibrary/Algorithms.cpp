@@ -1,20 +1,24 @@
-#include "pch.h"
+#include "Algorithms.h"
 #include <cstddef>
 
 namespace FLORENCE
 {
-    Concurrent** ptr_Concurrent_Array = NULL;
-    Concurrent* ptr_Concurrent[3] = { NULL, NULL, NULL };
-    ListenRespond* ptr_ListenRespond = NULL;
-    Concurrent* ptr_New_Concurrent = NULL;
+    Concurrent** Algorithms::ptr_Concurrent_Array = NULL;
+    Concurrent* Algorithms::ptr_Concurrent[3] = { NULL, NULL, NULL };
+    ListenRespond* Algorithms::ptr_ListenRespond = NULL;
+    Concurrent* Algorithms::ptr_New_Concurrent = NULL;
 //===
 //===
-    Praise0_Algorithm* ptr_Praise0_Algorithm = NULL;
+    Praise0_Algorithm* Algorithms::ptr_Praise0_Algorithm = NULL;
 //===
 //===
 
     Algorithms::Algorithms()
     {
+        this->ptr_Concurrent[0] = new Concurrent();
+        this->ptr_Concurrent[1] = new Concurrent();
+        this->ptr_Concurrent[2] = new Concurrent();//NUMBER OF CONCURRENT CORES
+        this->ptr_Concurrent_Array = this->ptr_Concurrent;
 //===
 //===
         this->ptr_Praise0_Algorithm = new Praise0_Algorithm();
@@ -40,7 +44,6 @@ namespace FLORENCE
         while (this->ptr_New_Concurrent == NULL) { /* wait untill created */ }
         this->ptr_New_Concurrent->Initialise_Control();
 
-        this->ptr_Concurrent[3] = new class Concurrent[3];//NUMBER OF CONCURRENT CORES
         for (unsigned char index = 0; index < *ptr_NumberOfImplementedCores - 1; index++)
         {
             this->ptr_Concurrent[index] = this->ptr_New_Concurrent;

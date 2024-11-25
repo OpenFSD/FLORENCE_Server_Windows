@@ -1,6 +1,6 @@
 #pragma once
-#include <vector>
 #include "Control_Of_ListenRespond.h"
+#include "framework.h"
 
 namespace FLORENCE
 {
@@ -20,6 +20,6 @@ namespace FLORENCE
     protected:
 
     private:
-        class Control_Of_ListenRespond* ptr_Control_Of_ListenRespond;
+        static class Control_Of_ListenRespond* ptr_Control_Of_ListenRespond;
     };
 }

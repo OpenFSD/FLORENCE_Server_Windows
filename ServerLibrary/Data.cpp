@@ -3,21 +3,21 @@
 
 namespace FLORENCE
 {
-    class Control_Of_Data* ptr_Control_Of_Data = NULL;
-    class Input* ptr_PraiseBuffer = NULL;
-    class Output* ptr_DistributeBuffer = NULL;
-    class Input* ptr_InputRefferenceOfCore[3] = { NULL, NULL, NULL };//NUMBER OF CONCURRENT CORES
-    class Input** ptr_InputRefferenceOfCore_Array = NULL;
-    class Input* ptr_new_Input = NULL;
-    class Output* ptr_new_Output = NULL;
-    class Output* ptr_OutputRefferenceOfCore[3] = { NULL, NULL, NULL };//NUMBER OF CONCURRENT CORES
-    class Output** ptr_OutputRefferenceOfCore_Array = NULL;
-    std::vector<class Input*>* ptr_StackOfInputPraise = NULL;
-    std::vector<class Output*>* ptr_StackOfDistributeBuffer = NULL;
+    Control_Of_Data* Data::ptr_Control_Of_Data = NULL;
+    Input* Data::ptr_PraiseBuffer = NULL;
+    Output* Data::ptr_DistributeBuffer = NULL;
+    Input* Data::ptr_InputRefferenceOfCore[3] = { NULL, NULL, NULL };//NUMBER OF CONCURRENT CORES
+    Input** Data::ptr_InputRefferenceOfCore_Array = NULL;
+    Input* Data::ptr_new_Input = NULL;
+    Output* Data::ptr_new_Output = NULL;
+    Output* Data::ptr_OutputRefferenceOfCore[3] = { NULL, NULL, NULL };//NUMBER OF CONCURRENT CORES
+    Output** Data::ptr_OutputRefferenceOfCore_Array = NULL;
+    std::vector<FLORENCE::Input*>* Data::ptr_StackOfInputPraise = NULL;
+    std::vector<FLORENCE::Output*>* Data::ptr_StackOfDistributeBuffer = NULL;
 //===
 //===
-    class Praise0_Input* prt_Praise0_Input = NULL;
-    class Praise0_Output* prt_Praise0_Outut = NULL;
+    Praise0_Input* Data::prt_Praise0_Input = NULL;
+    Praise0_Output* Data::prt_Praise0_Outut = NULL;
 //===
 //===
 

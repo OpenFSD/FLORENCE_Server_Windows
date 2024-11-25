@@ -1,8 +1,8 @@
-#include "pch.h"
+#include "Control_Of_ListenRespond.h"
 
 namespace FLORENCE
 {
-    bool flag_IO_ThreadState = false;
+    bool Control_Of_ListenRespond::flag_IO_ThreadState = false;
 
     Control_Of_ListenRespond::Control_Of_ListenRespond()
     {

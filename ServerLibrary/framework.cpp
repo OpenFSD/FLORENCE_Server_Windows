@@ -1,9 +1,9 @@
-#include "pch.h"
+#include "framework.h"
 #include <cstddef>
 
 namespace FLORENCE
 {
-	FLORENCE::Server* ptr_Server = NULL;
+	FLORENCE::Server* framework::ptr_Server = NULL;
 
 	framework::framework()
 	{

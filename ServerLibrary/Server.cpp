@@ -3,10 +3,10 @@
 
 namespace FLORENCE
 {
-    class Algorithms* ptr_Algorithms = NULL;
-    class Data* ptr_Data = NULL;
-    class Execute* ptr_Execute = NULL;
-    class Global* ptr_Global = NULL;
+    Algorithms* Server::ptr_Algorithms = NULL;
+    Data* Server::ptr_Data = NULL;
+    Execute* Server::ptr_Execute = NULL;
+    Global* Server::ptr_Global = NULL;
 
     Server::Server()
     {
@@ -33,22 +33,22 @@ namespace FLORENCE
         delete this->ptr_Execute;
     }
 
-    class Algorithms* Server::Get_Algorithms()
+    Algorithms* Server::Get_Algorithms()
     {
         return this->ptr_Algorithms;
     }
 
-    class Data* Server::Get_Data()
+    Data* Server::Get_Data()
     {
         return this->ptr_Data;
     }
 
-    class Execute* Server::Get_Execute()
+    Execute* Server::Get_Execute()
     {
         return this->ptr_Execute;
     }
 
-    class Global* Server::Get_Global()
+    Global* Server::Get_Global()
     {
         return this->ptr_Global;
     }

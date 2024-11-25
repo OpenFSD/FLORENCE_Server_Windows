@@ -1,31 +1,27 @@
-#include "pch.h"
+#include "Global.h"
 #include <cstddef>
 
 namespace FLORENCE
 {
-    bool flag_core_ACTIVE = NULL;
-    bool flag_core_IDLE = NULL;
-    bool flag_write_IDLE[2] = { NULL, NULL };
-    bool flag_write_WAIT[2] = { NULL, NULL };
-    bool flag_write_WRITE[2] = { NULL, NULL };
-    unsigned char ptr_num_Implemented_Cores = NULL;
+    bool Global::flag_core_ACTIVE = NULL;
+    bool Global::flag_core_IDLE = NULL;
+    bool Global::flag_write_IDLE[2] = { NULL, NULL };
+    bool Global::flag_write_WAIT[2] = { NULL, NULL };
+    bool Global::flag_write_WRITE[2] = { NULL, NULL };
+    unsigned char* Global::ptr_num_Implemented_Cores = NULL;
 
     Global::Global()
     {
         this->flag_core_ACTIVE = new bool(true);
         this->flag_core_IDLE = new bool(false);
 
-        this->flag_write_IDLE[2] = new bool[2];
-        this->flag_write_WAIT[2] = new bool[2];
-        this->flag_write_WRITE[2] = new bool[2];
-
-        this->flag_write_IDLE[1] = bool(false);
-        this->flag_write_WAIT[1] = bool(false);
-        this->flag_write_WRITE[1] = bool(true);
+        this->flag_write_IDLE[0] = bool(false);
+        this->flag_write_WAIT[0] = bool(false);
+        this->flag_write_WRITE[0] = bool(true);
         
-        this->flag_write_IDLE[2] = bool(false);
-        this->flag_write_WAIT[2] = bool(true);
-        this->flag_write_WRITE[2] = bool(false);
+        this->flag_write_IDLE[1] = bool(false);
+        this->flag_write_WAIT[1] = bool(true);
+        this->flag_write_WRITE[1] = bool(false);
 
         this->ptr_num_Implemented_Cores = new unsigned char(4);//NUMBER OF CORES
     }

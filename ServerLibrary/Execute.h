@@ -12,19 +12,19 @@ namespace FLORENCE
     {
     public:
         Execute(
-            class Global* ptr_Global,
+            Global* ptr_Global,
             unsigned char* ptr_MyNumImplementedCores
         );
         virtual ~Execute();
         void Initialise();
         void Initialise_Control(
             unsigned char* ptr_MyNumImplementedCores,
-            class Global* ptr_Global
+            Global* ptr_Global
         );
         void Initialise_Threads();
-        class Control_Of_Execute* Get_Control_Of_Execute();
-        class LaunchConcurrency* Get_LaunchConcurrency();
-        class WriteEnable* Get_WriteEnable();
+        Control_Of_Execute* Get_Control_Of_Execute();
+        LaunchConcurrency* Get_LaunchConcurrency();
+        WriteEnable* Get_WriteEnable();
 
     protected:
 

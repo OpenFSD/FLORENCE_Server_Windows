@@ -3,19 +3,23 @@
 
 namespace FLORENCE
 {
-    class Control_Of_Execute* ptr_Control_Of_Execute = NULL;
-    class LaunchConcurrency* ptr_LaunchConcurrency = NULL;
+    Control_Of_Execute* ptr_Control_Of_Execute = NULL;
+    LaunchConcurrency* ptr_LaunchConcurrency = NULL;
     std::thread* ptr_Thread_WithCoreId[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CORES
-    class WriteEnable* ptr_WriteEnable = NULL;
+    WriteEnable* ptr_WriteEnable = NULL;
 
     Execute::Execute(
-        class FLORENCE::Global* ptr_Global,
+        Global* ptr_Global,
         unsigned char* ptr_MyNumImplementedCores
     )
     {
+        this->ptr_Control_Of_Execute = NULL;
+
         this->ptr_LaunchConcurrency = new class LaunchConcurrency();
         while (this->ptr_LaunchConcurrency == NULL) { /* wait untill created */ }
         this->ptr_LaunchConcurrency->Initialise_Control(ptr_Global, ptr_MyNumImplementedCores);
+
+        this->ptr_Thread_WithCoreId[4] = { NULL };//NUMBER OF CORES
 
         this->ptr_WriteEnable = new class WriteEnable();
         while (this->ptr_WriteEnable == NULL) { /* wait untill created */ }
@@ -35,13 +39,12 @@ namespace FLORENCE
 
     void Execute::Initialise()
     {
-        //FLORENCE::Server* FLORENCE::framework::Get_Server() = FLORENCE::framework::Get_Server();
         FLORENCE::framework::Get_Server()->Get_Algorithms()->Initialise(FLORENCE::framework::Get_Server()->Get_Global()->Get_NumCores());
     }
 
     void Execute::Initialise_Control(
         unsigned char* ptr_MyNumImplementedCores,
-        class FLORENCE::Global* ptr_Global
+        FLORENCE::Global* ptr_Global
     )
     {
         this->ptr_Control_Of_Execute = new class Control_Of_Execute(ptr_MyNumImplementedCores);
@@ -50,7 +53,6 @@ namespace FLORENCE
 
     void Execute::Initialise_Threads()
     {
-        //FLORENCE::Server* FLORENCE::framework::Get_Server() = FLORENCE::framework::Get_Server();
         this->ptr_Thread_WithCoreId[0] = new std::thread(
             FLORENCE::framework::Get_Server()->Get_Algorithms()->Get_ListenRespond()->Thread_IO_ListenDistribute,
             unsigned char(0),
