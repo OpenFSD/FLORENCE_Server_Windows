@@ -20,79 +20,79 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Library Include="..\x64\Debug\ServerLibrary.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ServerLibrary\Algorithms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Concurrent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_Algorithms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_Concurrent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_Execute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_LaunchConcurrency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_ListenRespond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_Output.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Control_Of_WriteEnable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerLibrary\Execute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\ServerLibrary\framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Algorithms.h">
+    <ClInclude Include="..\ServerLibrary\Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Concurrent.h">
+    <ClInclude Include="..\ServerLibrary\Input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Control_Of_Algorithms.h">
+    <ClInclude Include="..\ServerLibrary\LaunchConcurrency.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Control_Of_Concurrent.h">
+    <ClInclude Include="..\ServerLibrary\ListenRespond.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Control_Of_Data.h">
+    <ClInclude Include="..\ServerLibrary\Output.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Control_Of_Execute.h">
+    <ClInclude Include="..\ServerLibrary\Praise0_Algorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Control_Of_Input.h">
+    <ClInclude Include="..\ServerLibrary\Praise0_Input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Control_Of_LaunchConcurrency.h">
+    <ClInclude Include="..\ServerLibrary\Praise0_Output.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Control_Of_ListenRespond.h">
+    <ClInclude Include="..\ServerLibrary\Server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Control_Of_Output.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Control_Of_WriteEnable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Data.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Execute.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Global.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LaunchConcurrency.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ListenRespond.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Output.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Praise0_Algorithm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Praise0_Input.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Praise0_Output.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WriteEnable.h">
+    <ClInclude Include="..\ServerLibrary\WriteEnable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -6,10 +6,12 @@
 namespace FLORENCE
 {
 	// TODO: This is an example of a library function
-	void main()
+	int main()
 	{
-		FLORENCE::framework* ptr_framework = new FLORENCE::framework();
+		class FLORENCE::framework* ptr_framework = new class FLORENCE::framework();
 		while (ptr_framework == NULL) { /* wait untill created */ }
+
+		return 0;
 	}
 }
 

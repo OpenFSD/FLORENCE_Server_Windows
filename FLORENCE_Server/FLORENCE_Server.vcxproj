@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Legel.DESKTOP-RKOK0RG\source\repos\StaticServer\FLORENCE_Server;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Legel.DESKTOP-RKOK0RG\source\repos\StaticServer\x64\Debug;C:\Users\Legel.DESKTOP-RKOK0RG\source\repos\StaticServer\ServerLibrary;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,31 +136,33 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Library Include="..\x64\Debug\ServerLibrary.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ServerLibrary\Algorithms.h" />
+    <ClInclude Include="..\ServerLibrary\Concurrent.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_Algorithms.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_Concurrent.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_Data.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_Execute.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_Input.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_LaunchConcurrency.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_ListenRespond.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_Output.h" />
+    <ClInclude Include="..\ServerLibrary\Control_Of_WriteEnable.h" />
+    <ClInclude Include="..\ServerLibrary\Data.h" />
+    <ClInclude Include="..\ServerLibrary\Execute.h" />
     <ClInclude Include="..\ServerLibrary\framework.h" />
-    <ClInclude Include="Algorithms.h" />
-    <ClInclude Include="Concurrent.h" />
-    <ClInclude Include="Control_Of_Algorithms.h" />
-    <ClInclude Include="Control_Of_Concurrent.h" />
-    <ClInclude Include="Control_Of_Data.h" />
-    <ClInclude Include="Control_Of_Execute.h" />
-    <ClInclude Include="Control_Of_Input.h" />
-    <ClInclude Include="Control_Of_LaunchConcurrency.h" />
-    <ClInclude Include="Control_Of_ListenRespond.h" />
-    <ClInclude Include="Control_Of_Output.h" />
-    <ClInclude Include="Control_Of_WriteEnable.h" />
-    <ClInclude Include="Data.h" />
-    <ClInclude Include="Execute.h" />
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="Global.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="LaunchConcurrency.h" />
-    <ClInclude Include="ListenRespond.h" />
-    <ClInclude Include="Output.h" />
-    <ClInclude Include="Praise0_Algorithm.h" />
-    <ClInclude Include="Praise0_Input.h" />
-    <ClInclude Include="Praise0_Output.h" />
-    <ClInclude Include="Server.h" />
-    <ClInclude Include="WriteEnable.h" />
+    <ClInclude Include="..\ServerLibrary\Global.h" />
+    <ClInclude Include="..\ServerLibrary\Input.h" />
+    <ClInclude Include="..\ServerLibrary\LaunchConcurrency.h" />
+    <ClInclude Include="..\ServerLibrary\ListenRespond.h" />
+    <ClInclude Include="..\ServerLibrary\Output.h" />
+    <ClInclude Include="..\ServerLibrary\Praise0_Algorithm.h" />
+    <ClInclude Include="..\ServerLibrary\Praise0_Input.h" />
+    <ClInclude Include="..\ServerLibrary\Praise0_Output.h" />
+    <ClInclude Include="..\ServerLibrary\Server.h" />
+    <ClInclude Include="..\ServerLibrary\WriteEnable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
