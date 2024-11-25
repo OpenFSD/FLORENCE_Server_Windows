@@ -1,4 +1,4 @@
-# FLORENCE in CMAKE
+# FLORENCE Server
 
 ## Debuging Link Errors
 
