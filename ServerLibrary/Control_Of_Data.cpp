@@ -1,14 +1,14 @@
-#include "pch.h"
+#include "Control_Of_Data.h"
 
 namespace FLORENCE
 {
-    bool flag_InputStackLoaded = false;
-    bool flag_OutputStackLoaded = false;
+    bool Control_Of_Data::flag_InputStackLoaded = false;
+    bool Control_Of_Data::flag_OutputStackLoaded = false;
 
     Control_Of_Data::Control_Of_Data()
     {
-        this->flag_InputStackLoaded = bool(false);
-        this->flag_OutputStackLoaded = bool(false);
+        flag_InputStackLoaded = bool(false);
+        flag_OutputStackLoaded = bool(false);
     }
     Control_Of_Data::~Control_Of_Data()
     {
@@ -26,9 +26,9 @@ namespace FLORENCE
         }
     }
 
-    void Control_Of_Data::PopFromStackOfInputPraises(
-        FLORENCE::Input* referenceForCore,
-        std::vector<FLORENCE::Input*>* ptr_inputStack
+    void FLORENCE::Control_Of_Data::PopFromStackOfInputPraises(
+        class FLORENCE::Input* referenceForCore,
+        std::vector<class FLORENCE::Input*>* ptr_inputStack
     )
     {
         referenceForCore = ptr_inputStack->at(0);
@@ -38,8 +38,8 @@ namespace FLORENCE
     }
 
     void Control_Of_Data::PopFromStackOfOutput(
-        FLORENCE::Output* distributeBuffer,
-        std::vector<FLORENCE::Output*>* ptr_outputStack
+        class FLORENCE::Output* distributeBuffer,
+        std::vector<class FLORENCE::Output*>* ptr_outputStack
     )
     {
         distributeBuffer->SetPraiseEventId(*ptr_outputStack->at(1)->GetPraiseEventId());
@@ -48,8 +48,8 @@ namespace FLORENCE
     }
 
     void Control_Of_Data::PushToStackOfInputPraises(
-        std::vector<FLORENCE::Input*>* ptr_InputStack,
-        FLORENCE::Input* ptr_PraiseBuffer
+        std::vector<class FLORENCE::Input*>* ptr_InputStack,
+        class FLORENCE::Input* ptr_PraiseBuffer
     )
     {
         ptr_InputStack->push_back(ptr_InputStack->at(0));
@@ -62,8 +62,8 @@ namespace FLORENCE
     }
 
     void Control_Of_Data::PushToStackOfOutput(
-        std::vector<FLORENCE::Output*>* ptr_outputStack,
-        FLORENCE::Output* ptr_referenceForCore
+        std::vector<class FLORENCE::Output*>* ptr_outputStack,
+        class FLORENCE::Output* ptr_referenceForCore
     )
     {
         ptr_outputStack->push_back(ptr_outputStack->at(0));
@@ -81,16 +81,16 @@ namespace FLORENCE
     }
     bool Control_Of_Data::GetFlag_OutputStackLoaded()
     {
-        return this->flag_OutputStackLoaded;
+        return flag_OutputStackLoaded;
     }
 
 
     void Control_Of_Data::SetFlag_InputStackLoaded(bool value)
     {
-        this->flag_InputStackLoaded = value;
+        flag_InputStackLoaded = value;
     }
     void Control_Of_Data::SetFlag_OutputStackLoaded(bool value)
     {
-        this->flag_OutputStackLoaded = value;
+        flag_OutputStackLoaded = value;
     }
 }

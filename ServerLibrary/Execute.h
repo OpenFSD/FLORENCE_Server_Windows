@@ -5,6 +5,7 @@
 #include "Global.h"
 #include "LaunchConcurrency.h"
 #include "WriteEnable.h"
+#include "framework.h"
 
 namespace FLORENCE
 {
@@ -12,26 +13,26 @@ namespace FLORENCE
     {
     public:
         Execute(
-            Global* ptr_Global,
+            class Global* ptr_Global,
             unsigned char* ptr_MyNumImplementedCores
         );
         virtual ~Execute();
         void Initialise();
         void Initialise_Control(
             unsigned char* ptr_MyNumImplementedCores,
-            Global* ptr_Global
+            class Global* ptr_Global
         );
         void Initialise_Threads();
-        Control_Of_Execute* Get_Control_Of_Execute();
-        LaunchConcurrency* Get_LaunchConcurrency();
-        WriteEnable* Get_WriteEnable();
+        class Control_Of_Execute* Get_Control_Of_Execute();
+        class LaunchConcurrency* Get_LaunchConcurrency();
+        class WriteEnable* Get_WriteEnable();
 
     protected:
 
     private:
-        class Control_Of_Execute* ptr_Control_Of_Execute;
-        class LaunchConcurrency* ptr_LaunchConcurrency;
-        std::thread* ptr_Thread_WithCoreId[4];//NUMBER OF CORES
-        class WriteEnable* ptr_WriteEnable;
+        static class Control_Of_Execute* ptr_Control_Of_Execute;
+        static class LaunchConcurrency* ptr_LaunchConcurrency;
+        static std::thread* ptr_Thread_WithCoreId[4];//NUMBER OF CORES
+        static class WriteEnable* ptr_WriteEnable;
     };
 }

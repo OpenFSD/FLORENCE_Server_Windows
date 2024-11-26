@@ -15,7 +15,7 @@ namespace FLORENCE
             unsigned char* ptr_MyNumImplementedCores
         );
 
-        Control_Of_ListenRespond* Get_Control_Of_ListenRespond();
+        class Control_Of_ListenRespond* Get_Control_Of_ListenRespond();
 
     protected:
 

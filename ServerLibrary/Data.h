@@ -15,17 +15,17 @@ namespace FLORENCE
         Data(unsigned char* ptr_NumberOfImplementedCores);
         virtual ~Data();
         void Initialise_Control();
-        Control_Of_Data* Get_Control_Of_Data();
-        Output* Get_DistributeBuffer();
-        Input* Get_InputRefferenceOfCore(unsigned char concurrent_coreId);
-        Output* Get_OutputRefferenceOfCore(unsigned char concurrent_coreId);
-        std::vector<Input*>* Get_StackOfInputPraise();
-        std::vector<Output*>* Get_StackOfDistributeBuffer();
-        Input* Get_PraiseBuffer();
+        class Control_Of_Data* Get_Control_Of_Data();
+        class Output* Get_DistributeBuffer();
+        class Input* Get_InputRefferenceOfCore(unsigned char concurrent_coreId);
+        class Output* Get_OutputRefferenceOfCore(unsigned char concurrent_coreId);
+        std::vector<class Input*>* Get_StackOfInputPraise();
+        std::vector<class Output*>* Get_StackOfDistributeBuffer();
+        class Input* Get_PraiseBuffer();
 
         void Set_DistributeBuffer(Output* value_Output);
-        void Set_InputRefferenceOfCore(unsigned char concurrent_coreId, Input* value_Input);
-        void Set_OutputRefferenceOfCore(unsigned char concurrent_coreId, Output* value_Output);
+        void Set_InputRefferenceOfCore(unsigned char concurrent_coreId, class Input* value_Input);
+        void Set_OutputRefferenceOfCore(unsigned char concurrent_coreId, class Output* value_Output);
         void Set_PraiseBuffer(Input* value_Input);
 
     protected:

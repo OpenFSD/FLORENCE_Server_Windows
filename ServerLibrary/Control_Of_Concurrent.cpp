@@ -17,7 +17,6 @@ namespace FLORENCE
 		unsigned char concurrent_coreId
 	)
 	{
-		//FLORENCE::Server* FLORENCE::framework::Get_Server() = FLORENCE::framework::Get_Server();
 		switch (*ptr_praiseEventId)
 		{
 //===

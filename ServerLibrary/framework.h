@@ -10,7 +10,7 @@ namespace FLORENCE
     public:
         framework();
         virtual ~framework();
-        static Server* Get_Server();
+        static class Server* Get_Server();
 
     protected:
 

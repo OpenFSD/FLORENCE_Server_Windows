@@ -3,14 +3,14 @@
 
 namespace FLORENCE
 {
-	FLORENCE::Server* framework::ptr_Server = NULL;
+	class FLORENCE::Server* framework::ptr_Server = NULL;
 
 	framework::framework()
 	{
-		this->ptr_Server = new FLORENCE::Server();
-		while (this->ptr_Server == NULL) { /* wait untill created */ }
-		this->ptr_Server->Get_Execute()->Initialise();
-		this->ptr_Server->Get_Execute()->Initialise_Threads();
+		ptr_Server = new class FLORENCE::Server();
+		while (ptr_Server == NULL) { /* wait untill created */ }
+		ptr_Server->Get_Execute()->Initialise();
+		ptr_Server->Get_Execute()->Initialise_Threads();
 	}
 
 	framework::~framework()
